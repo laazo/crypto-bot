@@ -50,7 +50,7 @@ controller.hears(['eth', 'ethereum'], 'direct_mention, direct_message, mention',
 			let apiResponse = JSON.parse(res);
 			ethereumPrice = parseFloat(apiResponse[1].price_zar);
 			emoji = previousEtPrice < ethereumPrice ? ':arrow_up:' : ':arrow_down:';
-			bot.reply(message, opt + ethereumPrice.toFixed(2) + ' ' + emoji);
+			bot.reply(message, opt.replace('Bitcoin', 'Ethereum') + ethereumPrice.toFixed(2) + ' ' + emoji);
 			previousEtPrice = ethereumPrice;
 		});
 	}).on('error', (err) => { 
