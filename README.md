@@ -1,3 +1,3 @@
 ## Welcome to Crypto bot
 
-A simple cryto bot for slack.
+A simple crypto bot for slack.
